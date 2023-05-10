@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es2015"
+    ],
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+}
