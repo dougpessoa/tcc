@@ -1,0 +1,27 @@
+version: "3"
+services:
+  elasticseeker:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+    container_name: elasticseeker
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      discovery.type: single-node
+    networks:
+      - elastic
+
+  kibanaseeker:
+    image: docker.elastic.co/kibana/kibana:7.9.2
+    container_name: kibanaseeker
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://elasticseeker:9200
+      ELASTICSEARCH_HOSTS: http://elasticseeker:9200
+    networks:
+      - elastic
+
+networks:
+  elastic:
+    driver: bridge
