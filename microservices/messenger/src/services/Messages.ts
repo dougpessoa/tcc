@@ -2,7 +2,6 @@ import { IMessage, Message } from "../models/Messages"
 
 class MessagesServices {
   async listMessages(page?: number, limit?: number) {
-    console.log(page, limit)
     try {
       const messages = await Message.paginate({}, { page, limit })
 
