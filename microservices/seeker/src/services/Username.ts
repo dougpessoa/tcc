@@ -1,7 +1,7 @@
 import { getClient } from "../client/elasticsearch";
 
 class UsernameService {
-  async saveUsername(username: string, platform: string) {
+  async saveUsername(username: string, platform: number) {
     const client = getClient()
 
     const result = await client.index({
@@ -40,6 +40,27 @@ class UsernameService {
 
     const result = await client.delete({
       id,
+      index: 'elastic_test',
+      type: 'type_elastic_test'
+    })
+
+    return {
+      result,
+      status: 200
+    }
+  }
+
+  async deleteByUsername(username: string) {
+    const client = getClient()
+
+    const result = await client.deleteByQuery({
+      body: {
+        query: {
+          match: {
+            username,
+          }
+        }
+      },
       index: 'elastic_test',
       type: 'type_elastic_test'
     })

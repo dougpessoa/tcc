@@ -13,7 +13,7 @@ async function postTweet(username: string): Promise<PostTweetResponseTypes> {
     const rwClient = client.readWrite;
 
     const response = await rwClient.v2.tweet(
-      `Hello ${username}, you have an message on our platform!!!`,
+      `Hello @${username}, you have an message on our platform!!!`,
     );
 
     return {

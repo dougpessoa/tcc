@@ -1,26 +1,18 @@
 import { Schema, model, Document, PaginateModel } from "mongoose";
 import paginate from 'mongoose-paginate-v2';
+import { MessageDTO } from "../dtos";
 
-interface IMessage {
-  message: string,
-  issuer_ip: string
-  issuer_city: string
-  issuer_contry: string
-  platform: string
-  username: string
-}
-
-const messageSchema = new Schema<IMessage>({
+const messageSchema = new Schema<MessageDTO>({
   message: { type: String, required: true },
-  issuer_ip: { type: String, required: true },
-  issuer_city: { type: String, required: true },
-  issuer_contry: { type: String, required: true },
-  platform: { type: String, required: true },
+  issuer_ip: { type: String, required: false },
+  issuer_city: { type: String, required: false },
+  issuer_contry: { type: String, required: false },
+  platform: { type: Number, required: true },
   username: { type: String, required: true },
 })
 
 messageSchema.plugin(paginate);
 
-const Message = model<IMessage, PaginateModel<IMessage>>('Message', messageSchema)
+const Message = model<MessageDTO, PaginateModel<MessageDTO>>('Message', messageSchema)
 
-export { Message, IMessage }
+export { Message, MessageDTO }

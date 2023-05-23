@@ -36,4 +36,14 @@ usernameRoutes.delete('/:id', async (request, response) => {
   return response.status(result.status).json(result)
 })
 
+usernameRoutes.delete('/u/:username', async (request, response) => {
+  const { username } = request.params
+
+  const usernameService = new UsernameService();
+
+  const result = await usernameService.deleteByUsername(username)
+
+  return response.status(result.status).json(result)
+})
+
 export { usernameRoutes }

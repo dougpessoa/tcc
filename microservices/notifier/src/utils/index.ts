@@ -11,20 +11,8 @@ export function datesIsMoreThen24Hours(
   );
   const differenceInHours = differenceInSeconds / (1000 * 60 * 60);
 
-  console.log({
-    initialFormatedDate,
-    endFormatedDate,
-    differenceInSeconds,
-    differenceInHours,
-    bol: differenceInHours > 24,
-  });
-
   return differenceInHours > 24;
 }
-
-export const fakeSendTweet = async (delay = 1500): Promise<unknown> => {
-  return await new Promise((r) => setTimeout(r, delay));
-};
 
 export function generateMongoURL({
   port,
