@@ -1,13 +1,13 @@
 import { NextFunction, Request, Response } from "express";
 import { AppError } from "../errors/AppError";
-import { GenerateMongoURLProps } from "../types";
+import { TGenerateMongoURLProps } from "../types";
 
 export function generateMongoURL({
   port,
   domain,
   user,
   password,
-}: GenerateMongoURLProps) {
+}: TGenerateMongoURLProps) {
   return `mongodb://${user}:${password}@${domain}:${port}/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2`;
 }
 
