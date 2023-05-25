@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 const MessageApi = axios.create({
-  baseURL: 'http://localhost:1000',
+  baseURL: 'http://154.12.237.236',
   timeout: 500000
 })
 
 const SeekerApi = axios.create({
-  baseURL: 'http://localhost:1001',
+  baseURL: 'http://154.12.237.236:1001',
   timeout: 500000
 })
 
