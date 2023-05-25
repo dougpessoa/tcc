@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "rm -rf ./dist && webpack --mode production",
+    "build": "rm -rf ./dist && webpack --mode production --config ./webpack.config.js",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8082 npx serve",
     "start": "webpack serve --mode production",
