@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    container_name: messenger_mongo
+    restart: always
+    ports:
+      - "27020:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: messanger_mongo
+      MONGO_INITDB_ROOT_PASSWORD: cc3905664cbc4dde94305a2f318153c7
