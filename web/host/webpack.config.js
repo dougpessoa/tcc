@@ -5,7 +5,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: 'inline-source-map',
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://154.12.237.236:8080/",
   },
   mode: 'production',
   performance: {

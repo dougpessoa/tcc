@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8082/",
+    publicPath: "http://154.12.237.236:8082/",
   },
   devtool: 'inline-source-map',
   mode: 'production',

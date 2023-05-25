@@ -12,7 +12,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: "http://localhost:8081/",
+    publicPath: "http://154.12.237.236:8081/",
   },
 
   resolve: {
