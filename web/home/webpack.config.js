@@ -3,6 +3,14 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 
 module.exports = {
+  devtool: 'inline-source-map',
+  mode: 'production',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
+
   output: {
     publicPath: "http://localhost:8081/",
   },

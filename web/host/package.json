@@ -2,7 +2,7 @@
   "name": "react-nested-routers_shell",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "rm -rf ./dist && webpack --mode production",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8080 npx serve",
     "start": "webpack serve --mode production",
