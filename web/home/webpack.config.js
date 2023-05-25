@@ -12,7 +12,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: "http://localhost:8081/",
+    publicPath: "http://localhost:3001/",
   },
 
   resolve: {
@@ -20,7 +20,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8081,
+    port: 3001,
     historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',

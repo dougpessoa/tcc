@@ -5,7 +5,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: 'inline-source-map',
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:3000/",
   },
   mode: 'production',
   performance: {
@@ -19,7 +19,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8080,
+    port: 3000,
     historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
